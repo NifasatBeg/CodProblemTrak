@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Coding Problem Tracker</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 15px;
+      min-width: 700px;
+      max-width: 700px;
+      margin: auto;
+      background-color: #f9f9f9;
+      color: #333;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h3 {
+      color: #2c3e50;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .section {
+      padding: 15px;
+      background: #ffffff;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    }
+
+    label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+
+    input, select, button {
+      width: 100%;
+      padding: 10px;
+      font-size: 14px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      box-sizing: border-box;
+      margin-top: 5px;
+      transition: box-shadow 0.2s;
+    }
+
+    input:focus, select:focus, button:hover {
+      box-shadow: 0 0 5px #007bff;
+    }
+
+    button {
+      background: #007bff;
+      color: #fff;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #0056b3;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    li {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px;
+      background: #fefefe;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      margin-bottom: 10px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    }
+
+    li a {
+      text-decoration: none;
+      color: #007bff;
+      font-weight: bold;
+    }
+
+    li a:hover {
+      text-decoration: underline;
+    }
+
+    #status {
+      text-align: center;
+      font-size: 14px;
+      color: green;
+      margin-top: 15px;
+    }
+  </style>
+</head>
+<body>
+  <h3>Coding Problem Tracker</h3>
+
+    <div class="container">
+      <div class="section">
+        <button id="add-problem">Add Current Problem</button>
+     </div>
+  
+    <div class="section">
+      <h4>Saved Problems:</h4>
+      <ul id="problem-list"></ul>
+    </div>
+
+    <div class="section">
+      <label for="problem-limit">Maximum Problems to Store:</label>
+      <input type="number" id="problem-limit" min="1" value="10">
+      <button id="save-limit">Save Limit</button>
+    </div>
+
+    <div class="section">
+      <label for="removal-approach">Removal Approach:</label>
+      <select id="removal-approach">
+        <option value="Oldest">Remove Oldest Added</option>
+        <option value="Most Accessed">Remove Most Frequently Accessed</option>
+      </select>
+      <button id="save-removal-approach">Save Removal Approach</button>
+    </div>
+  </div>
+
+  <p id="status"></p>
+  <script src="popup.js"></script>
+</body>
+</html>
